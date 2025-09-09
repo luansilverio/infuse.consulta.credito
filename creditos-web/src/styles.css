@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0f172a;color:#e2e8f0}
+.container{max-width:960px;margin:24px auto;padding:16px}
+.card{background:#0b1220;border:1px solid #1f2937;border-radius:16px;padding:16px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
+h1{font-size:1.5rem;margin:0 0 16px}
+
+/* FORM: grid responsivo e alinhado no topo */
+form{display:grid;grid-template-columns:1fr;gap:12px;align-items:start}
+@media (max-width:768px){form{display:grid;grid-template-columns:1fr;gap:12px;align-items:start}.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-top:4px}}
+
+/* Campo agrupado */
+.field{display:flex;flex-direction:column;gap:8px}
+
+/* Inputs com foco estável */
+.input{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0a0f1c;color:#e2e8f0}
+.input:focus{outline:2px solid #60a5fa;outline-offset:2px}
+
+/* Helper sem margem negativa */
+.helper{font-size:.85rem;color:#94a3b8;margin:6px 0 8px;line-height:1.2;min-height:18px}
+
+/* Tabela */
+.table-wrap{overflow:auto;margin-top:16px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #1f2937;text-align:left;white-space:nowrap}
+th{position:sticky;top:0;background:#0b1220}
+
+/* Badges e ações */
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #1f2937}
+.badge.ok{border-color:#16a34a;color:#86efac}
+.badge.no{border-color:#dc2626;color:#fca5a5}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-start;margin-top:4px}
+footer{margin-top:24px;font-size:.8rem;color:#64748b;text-align:center}
+
+/* Botões no estilo do tema */
+.btn{appearance:none;background:#111827;border:1px solid #334155;color:#e2e8f0;padding:10px 16px;border-radius:12px;cursor:pointer;transition:background .15s,border-color .15s,transform .05s}
+.btn:hover{background:#0b1220;border-color:#475569}
+.btn:active{transform:translateY(1px)}
+.btn:focus{outline:2px solid #60a5fa;outline-offset:2px}
+.btn-primary{background:#1e40af;border-color:#1e3a8a;color:#dbeafe}
+.btn-primary:hover{background:#1d4ed8;border-color:#1e3a8a}
