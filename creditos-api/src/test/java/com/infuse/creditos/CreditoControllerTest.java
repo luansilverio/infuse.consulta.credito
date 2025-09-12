@@ -3,6 +3,7 @@ package com.infuse.creditos;
 import com.infuse.creditos.controller.CreditoController;
 import com.infuse.creditos.model.Credito;
 import com.infuse.creditos.service.CreditoService;
+import com.infuse.creditos.messaging.ServiceBusPublisher;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,8 @@ public class CreditoControllerTest {
 
     @Autowired
     private MockMvc mvc;
+    @MockBean
+    private ServiceBusPublisher publisher;
 
     @MockBean
     private CreditoService service;
